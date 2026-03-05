@@ -1,53 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    text-align: center;
     color: #333;
 }
 
-/* Контейнер для всех страниц */
+/* Контейнер */
 .container {
-    padding: 30px 20px;
     max-width: 600px;
     margin: 0 auto;
+    padding: 30px 20px 40px 20px;
 }
 
-/* Первая страница */
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    margin-top: 40px;
+/* Заголовки */
+h1 {
+    text-align: center;
+    color: #e91e63;
+    font-size: 24px;
 }
 
-/* Кнопки — крупные и удобные */
+/* ===== КНОПКИ ===== */
 button {
     display: block;
     width: 100%;
-    padding: 18px;
-    margin: 15px 0;
+    padding: 20px;
+    margin: 14px 0;
     border: none;
-    border-radius: 40px;
+    border-radius: 50px;
     background: #e91e63;
     color: white;
-    font-size: 18px;
-    cursor: pointer;
+    font-size: 19px;
+    font-weight: bold;
 }
 
-button:hover {
-    background: #c2185b;
-}
-
-/* Скрытый текст */
+/* Текст под кнопкой */
 .hidden {
     display: none;
     background: white;
-    padding: 15px;
-    border-radius: 15px;
+    padding: 18px;
+    border-radius: 18px;
+    margin-top: -5px;
     margin-bottom: 15px;
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 /* Фото */
@@ -57,9 +56,14 @@ img {
     margin: 15px 0;
 }
 
-/* Музыка — большая и заметная */
+/* Музыка */
 audio {
     width: 100%;
-    margin-top: 20px;
-    height: 55px;
+    height: 60px;
+    margin: 20px 0;
+}
+
+/* Убираем лишнюю высоту */
+html, body {
+    min-height: auto;
 }
