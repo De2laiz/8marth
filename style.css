@@ -6,44 +6,38 @@ body {
     color: #333;
 }
 
-/* Центрирование контента */
+/* Контейнер для всех страниц */
 .container {
     padding: 30px 20px;
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-/* Карточка на первой странице */
+/* Первая страница */
 .card {
     background: white;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-top: 40px;
 }
 
-/* Заголовки */
-h1 {
-    color: #e91e63;
-}
-
-/* ===== КНОПКИ ===== */
+/* Кнопки — крупные и удобные */
 button {
-    display: block;              /* теперь столбиком */
-    width: 100%;                 /* на всю ширину */
-    padding: 18px;               /* больше */
+    display: block;
+    width: 100%;
+    padding: 18px;
     margin: 15px 0;
     border: none;
     border-radius: 40px;
     background: #e91e63;
     color: white;
-    font-size: 18px;             /* крупный текст */
+    font-size: 18px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 button:hover {
     background: #c2185b;
-    transform: scale(1.03);
 }
 
 /* Скрытый текст */
@@ -63,9 +57,9 @@ img {
     margin: 15px 0;
 }
 
-/* Музыкальный плеер */
+/* Музыка — большая и заметная */
 audio {
-    width: 100%;         /* растягиваем */
+    width: 100%;
     margin-top: 20px;
-    height: 50px;        /* делаем выше */
+    height: 55px;
 }
