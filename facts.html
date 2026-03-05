@@ -41,13 +41,25 @@ color:white;
 cursor:pointer;
 }
 
+/* факт */
+
 .fact{
-display:none;
-margin-top:10px;
-padding:15px;
+max-height:0;
+overflow:hidden;
+opacity:0;
+margin-top:0;
+padding:0 15px;
 background:#ffe4ec;
 border-radius:15px;
 font-size:17px;
+transition:all 0.5s ease;
+}
+
+.fact.open{
+max-height:200px;
+opacity:1;
+margin-top:10px;
+padding:15px;
 }
 
 a{
@@ -98,33 +110,30 @@ opacity:0;
 <button onclick="toggle('f6')">Факт 6</button>
 <div id="f6" class="fact">Тут напиши шестой факт</div>
 
-<button onclick="location.href='gallery.html'">Дальше😘</button>
+<button onclick="location.href='gallery.html'">Дальше 😘</button>
 
 </div>
 
 <script>
+
 function toggle(id){
 let el=document.getElementById(id);
-el.style.display=(el.style.display==="block")?"none":"block";
+el.classList.toggle("open");
 }
-</script>
 
-</body>
-</html>
-
-<script>
+/* сердечки при клике */
 
 document.addEventListener("click", function(e){
 
-let heart = document.createElement("div");
-heart.innerHTML = "❤️";
+let heart=document.createElement("div");
+heart.innerHTML="❤️";
 
-heart.style.position = "fixed";
-heart.style.left = e.clientX + "px";
-heart.style.top = e.clientY + "px";
-heart.style.fontSize = "30px";
-heart.style.pointerEvents = "none";
-heart.style.animation = "heartFloat 1s ease-out forwards";
+heart.style.position="fixed";
+heart.style.left=e.clientX+"px";
+heart.style.top=e.clientY+"px";
+heart.style.fontSize="30px";
+heart.style.pointerEvents="none";
+heart.style.animation="heartFloat 1s ease-out forwards";
 
 document.body.appendChild(heart);
 
