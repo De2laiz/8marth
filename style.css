@@ -6,35 +6,66 @@ body {
     color: #333;
 }
 
+/* Центрирование контента */
 .container {
-    padding: 40px 20px;
+    padding: 30px 20px;
+    max-width: 600px;
+    margin: auto;
 }
 
+/* Карточка на первой странице */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Заголовки */
+h1 {
+    color: #e91e63;
+}
+
+/* ===== КНОПКИ ===== */
 button {
-    padding: 12px 25px;
-    margin: 10px;
+    display: block;              /* теперь столбиком */
+    width: 100%;                 /* на всю ширину */
+    padding: 18px;               /* больше */
+    margin: 15px 0;
     border: none;
-    border-radius: 30px;
+    border-radius: 40px;
     background: #e91e63;
     color: white;
-    font-size: 16px;
+    font-size: 18px;             /* крупный текст */
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
     background: #c2185b;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
+/* Скрытый текст */
 .hidden {
     display: none;
-    margin-top: 10px;
-    font-size: 18px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 17px;
 }
 
+/* Фото */
 img {
-    max-width: 90%;
-    border-radius: 15px;
-    margin: 10px 0;
+    width: 100%;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+/* Музыкальный плеер */
+audio {
+    width: 100%;         /* растягиваем */
+    margin-top: 20px;
+    height: 50px;        /* делаем выше */
 }
