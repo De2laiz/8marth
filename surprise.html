@@ -47,6 +47,26 @@ text-decoration:none;
 color:#e91e63;
 }
 
+/* сердечки */
+
+@keyframes heartFloat{
+0%{
+transform:translate(-50%,-50%) scale(1);
+opacity:1;
+}
+100%{
+transform:translate(-50%,-120px) scale(1.5);
+opacity:0;
+}
+}
+
+/* конфетти */
+
+@keyframes confettiFall{
+0%{transform:translateY(-10vh);}
+100%{transform:translateY(110vh);}
+}
+
 </style>
 </head>
 
@@ -65,6 +85,48 @@ color:#e91e63;
 <a href="index.html">В начало🌹</a>
 
 </div>
+
+<script>
+
+document.addEventListener("click", function(e){
+
+let heart = document.createElement("div");
+heart.innerHTML = "❤️";
+
+heart.style.position = "fixed";
+heart.style.left = e.clientX + "px";
+heart.style.top = e.clientY + "px";
+heart.style.fontSize = "30px";
+heart.style.pointerEvents = "none";
+heart.style.animation = "heartFloat 1s ease-out forwards";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1000);
+
+});
+
+/* конфетти */
+
+for(let i=0;i<80;i++){
+
+let conf=document.createElement("div");
+
+conf.innerHTML="🎉";
+
+conf.style.position="fixed";
+conf.style.left=Math.random()*100+"vw";
+conf.style.top="-10px";
+conf.style.fontSize="20px";
+conf.style.animation="confettiFall "+(3+Math.random()*3)+"s linear infinite";
+
+document.body.appendChild(conf);
+
+}
+
+</script>
 
 </body>
 </html>
