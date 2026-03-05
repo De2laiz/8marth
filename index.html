@@ -134,7 +134,7 @@ heart.innerHTML = "❤️";
 heart.style.position = "fixed";
 heart.style.left = e.clientX + "px";
 heart.style.top = e.clientY + "px";
-heart.style.fontSize = "20px";
+heart.style.fontSize = "40px";
 heart.style.pointerEvents = "none";
 heart.style.animation = "heartFloat 1s ease-out forwards";
 
@@ -146,28 +146,11 @@ heart.remove();
 
 });
 
-/* конфетти */
-
-for(let i=0;i<80;i++){
-
-let conf=document.createElement("div");
-
-conf.innerHTML="🎉";
-
-conf.style.position="fixed";
-conf.style.left=Math.random()*100+"vw";
-conf.style.top="-10px";
-conf.style.fontSize="20px";
-conf.style.animation="confettiFall "+(3+Math.random()*3)+"s linear infinite";
-
-document.body.appendChild(conf);
-
-}
-
 </script>
 
 </body>
 </html>
+
 
 
 
