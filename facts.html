@@ -99,5 +99,29 @@ el.style.display=(el.style.display==="block")?"none":"block";
 </body>
 </html>
 
+<script>
+
+document.addEventListener("click", function(e){
+
+let heart = document.createElement("div");
+heart.innerHTML = "❤️";
+
+heart.style.position = "fixed";
+heart.style.left = e.clientX + "px";
+heart.style.top = e.clientY + "px";
+heart.style.fontSize = "30px";
+heart.style.pointerEvents = "none";
+heart.style.animation = "heartFloat 1s ease-out forwards";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1000);
+
+});
+
+</script>
+
 </body>
 </html>
