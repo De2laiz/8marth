@@ -27,7 +27,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 max-width:500px;
 width:90%;
 }
-  
+
 h1{
 color:#e91e63;
 font-size:28px;
@@ -57,12 +57,7 @@ color:#e91e63;
 display:none;
 }
 
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-/* летающие цветочки */
+/* цветочки */
 
 .flower{
 position:fixed;
@@ -76,7 +71,7 @@ from{transform:translateY(100vh);}
 to{transform:translateY(-10vh);}
 }
 
-/* сердечки */
+/* маленькие сердечки */
 
 @keyframes heartFloat{
 0%{
@@ -88,6 +83,8 @@ transform:translate(-50%,-120px) scale(1.5);
 opacity:0;
 }
 }
+
+/* экран любви */
 
 #loveScreen{
 position:fixed;
@@ -114,6 +111,8 @@ padding:20px;
 opacity:1;
 pointer-events:auto;
 }
+
+/* падающие сердца */
 
 .bigHeart{
 position:fixed;
@@ -142,8 +141,8 @@ opacity:0;
 <h1>С 8 Марта 🌷</h1>
 
 <p>
-Спасибо что ты есть в моей жизни🥰 
-Ты - самое прекрасное, что есть в этом мире 💖
+Спасибо что ты есть в моей жизни 🥰  
+Ты — самое прекрасное, что есть в этом мире 💖
 </p>
 
 <button onclick="showMessage()">Нажми меня ✨</button>
@@ -152,9 +151,12 @@ opacity:0;
 Я тебя очень ценю и люблю ❤️‍🔥
 </div>
 
+<button onclick="loveExplosion()">Я тебя люблю ❤️</button>
+
 <button onclick="location.href='facts.html'">Дальше →</button>
 
 </div>
+
 
 <div id="loveScreen">
 <div>Я тебя очень люблю ❤️</div>
@@ -164,13 +166,14 @@ opacity:0;
 
 <script>
 
-/* показать сообщение */
+/* показать скрытый текст */
 
 function showMessage(){
 document.getElementById("secret").style.display="block";
 }
 
-/* создаем цветочки */
+
+/* цветочки */
 
 for(let i=0;i<20;i++){
 
@@ -186,9 +189,8 @@ document.body.appendChild(flower);
 
 }
 
-</script>
 
-<script>
+/* сердечки при нажатии */
 
 document.addEventListener("click", function(e){
 
@@ -210,7 +212,8 @@ heart.remove();
 
 });
 
-/* взрыв любви */
+
+/* экран любви */
 
 function loveExplosion(){
 
@@ -236,16 +239,14 @@ heart.remove();
 
 }
 
+
+/* закрытие экрана */
+
+document.getElementById("loveScreen").addEventListener("click", function(){
+this.classList.remove("show");
+});
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
