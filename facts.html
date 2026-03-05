@@ -2,39 +2,102 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>6 причин 💖</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Факты ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+text-align:center;
+padding:20px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#e91e63;
+margin-bottom:20px;
+}
+
+button{
+width:100%;
+padding:18px;
+margin:10px 0;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#e91e63;
+color:white;
+cursor:pointer;
+}
+
+.fact{
+display:none;
+margin-top:10px;
+padding:15px;
+background:#ffe4ec;
+border-radius:15px;
+font-size:17px;
+}
+
+a{
+display:block;
+margin-top:20px;
+font-size:18px;
+text-decoration:none;
+color:#e91e63;
+}
+
+</style>
 </head>
-<body
+
+<body>
 
 <div class="container">
 
-<h1>6 причин, за которые я тебя люблю 💕</h1>
+<h1>6 фактов ❤️</h1>
 
-<button onclick="toggleText('fact1')">ТЕКСТ КНОПКИ 1</button>
-<div id="fact1" class="hidden">ТУТ ВПИШИ ТЕКСТ 1</div>
+<button onclick="toggle('f1')">Факт 1</button>
+<div id="f1" class="fact">Тут напиши первый факт</div>
 
-<button onclick="toggleText('fact2')">ТЕКСТ КНОПКИ 2</button>
-<div id="fact2" class="hidden">ТУТ ВПИШИ ТЕКСТ 2</div>
+<button onclick="toggle('f2')">Факт 2</button>
+<div id="f2" class="fact">Тут напиши второй факт</div>
 
-<button onclick="toggleText('fact3')">ТЕКСТ КНОПКИ 3</button>
-<div id="fact3" class="hidden">ТУТ ВПИШИ ТЕКСТ 3</div>
+<button onclick="toggle('f3')">Факт 3</button>
+<div id="f3" class="fact">Тут напиши третий факт</div>
 
-<button onclick="toggleText('fact4')">ТЕКСТ КНОПКИ 4</button>
-<div id="fact4" class="hidden">ТУТ ВПИШИ ТЕКСТ 4</div>
+<button onclick="toggle('f4')">Факт 4</button>
+<div id="f4" class="fact">Тут напиши четвертый факт</div>
 
-<button onclick="toggleText('fact5')">ТЕКСТ КНОПКИ 5</button>
-<div id="fact5" class="hidden">ТУТ ВПИШИ ТЕКСТ 5</div>
+<button onclick="toggle('f5')">Факт 5</button>
+<div id="f5" class="fact">Тут напиши пятый факт</div>
 
-<button onclick="toggleText('fact6')">ТЕКСТ КНОПКИ 6</button>
-<div id="fact6" class="hidden">ТУТ ВПИШИ ТЕКСТ 6</div>
+<button onclick="toggle('f6')">Факт 6</button>
+<div id="f6" class="fact">Тут напиши шестой факт</div>
+
+<button onclick="location.href='gallery.html'">Дальше😘</button>
 
 </div>
-  
-<br><br>
-<button onclick="location.href='gallery.html'">Дальше 📸</button>
-</div>
+
+<script>
+function toggle(id){
+let el=document.getElementById(id);
+el.style.display=(el.style.display==="block")?"none":"block";
+}
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
